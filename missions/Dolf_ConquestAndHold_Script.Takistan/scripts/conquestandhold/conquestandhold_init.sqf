@@ -89,7 +89,7 @@ deleteVehicle dolf_container;
 titleFadeOut 2;
 
 // ------------------------
-// Spawn truppe iniziali
+// Spawn truppe rinforzi
 // ------------------------
 _script_spawnUnita = [] execVM "scripts\conquestandhold\spawnRinforzi.sqf";
 
