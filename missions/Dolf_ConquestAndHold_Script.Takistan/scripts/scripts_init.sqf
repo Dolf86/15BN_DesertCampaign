@@ -1,0 +1,1 @@
+[] execVM "scripts\conquestandhold\conquestandhold_init.sqf";
