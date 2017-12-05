@@ -1,16 +1,22 @@
 #include "Zen_FrameworkFunctions\Zen_InitHeader.sqf"
-
-// <Your mission name here> by <your name here>
-// Version = <the date here>
-// Tested with ArmA 3 <version number>
-
-// This will fade in from black, to hide jarring actions at mission start, this is optional and you can change the value
-titleText ["Good Luck", "BLACK FADED", 0.2];
-// Some functions may not continue running properly after loading a saved game, do not delete this line
 enableSaving [false, false];
-// All clients stop executing here, do not delete this line
+
+// -------------------------------
+// Codice eseguito dal server e dai clients
+// -------------------------------
+
+
+
+
+
+// -------------------------------
+// Codice termine dello script per i clients
+// -------------------------------
 if (!isServer) exitWith {};
-// Execution stops until the mission begins (past briefing), do not delete this line
 sleep 1;
 
-// Enter the mission code here
+
+
+// -------------------------------
+// Codice eseguito solo dal server
+// -------------------------------
