@@ -1,4 +1,4 @@
-#Istruzioni
+# Istruzioni
 
 Per avviare il paradrop:
 - creare i marker *su canale globale* chiamandoli "paradrop_1", "paradrop_2" ecc
