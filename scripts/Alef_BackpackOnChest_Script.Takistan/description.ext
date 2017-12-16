@@ -1,0 +1,12 @@
+#include "Zen_FrameworkFunctions\Zen_DialogSystem\Zen_Dialog.hpp"
+
+class CfgFunctions {
+	#include "CfgFunctions.hpp"
+};
+
+class CfgNotifications {
+    #include "Zen_FrameworkFunctions\Zen_TaskSystem\Zen_TaskNotifications.hpp"
+};
+
+briefing = 0;
+onLoadName = "Base";
