@@ -38,6 +38,6 @@ class CfgNotifications {
 - selezionare la voce "Paradrop control panel" e premere il pulsante "Start" quando tutti i passeggeri sono a bordo.
 
 ### Changelog 0.2
-- Rinominate tutte le variabili per evitare problemi di compatibilità
-- Aggiunta UI di base per la creazione dei waypoint e l'avvio dell'
-- Modificato il setup dello script (rimosso lo spawn dell'aereo e pilota, ora vanno aggiunti da editor)
+- Rinominate tutte le variabili per evitare problemi di compatibilità;
+- Aggiunta UI di base per la creazione dei waypoint e l'avvio dell'aereo;
+- Modificato il setup dello script (rimosso lo spawn dell'aereo e pilota, ora vanno aggiunti da editor).
