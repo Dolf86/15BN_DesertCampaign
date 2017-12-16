@@ -1,0 +1,592 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=48;
+	};
+	class MarkerIDProvider
+	{
+		nextID=3;
+	};
+	class Camera
+	{
+		pos[]={8212.3262,298.12048,2100.9197};
+		dir[]={0.63563508,-0.27130932,0.72291744};
+		up[]={0.17917192,0.96245044,0.20377597};
+		aside[]={0.75107032,-6.7026122e-007,-0.66037565};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Props_F_Exp_Military_Camps",
+	"A3_Structures_F_Heli_Furniture",
+	"A3_Structures_F_Items_Electronics",
+	"A3_Structures_F_Civ_Camping",
+	"A3_Structures_F_Furniture",
+	"A3_Structures_F_EPB_Furniture",
+	"A3_Structures_F_Heli_Items_Electronics",
+	"A3_Structures_F_Mil_Cargo",
+	"A3_Misc_F_Helpers"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=8;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Props_F_Exp";
+			name="Arma 3 Apex - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Structures_F_EPB";
+			name="Arma 3 Adapt Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="A3_Misc_F";
+			name="Arma 3 - 3D Aids and Helpers";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=5575121;
+class ScenarioData
+{
+	author="Dolf";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.40000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=20;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8213.1084,296.76352,2102.4861};
+						angles[]={0,1.1351758,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						name="dolf";
+						isPlayer=1;
+					};
+					id=1;
+					type="B_Competitor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8160.0151,296.04001,2006.847};
+			};
+			id=14;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="dolf";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8213.1162,297.68484,2105.4175};
+				angles[]={-0,1.9958688,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="schermo1";
+			};
+			id=15;
+			type="Land_TripodScreen_01_large_F";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8213.8701,297.18448,2101.4326};
+				angles[]={-0,1.0631988,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=23;
+			type="OfficeTable_01_new_F";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8213.6162,297.76306,2101.907};
+				angles[]={0,4.3230062,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="pc";
+			};
+			id=28;
+			type="Land_Laptop_unfolded_F";
+			atlOffset=0.00012207031;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8216.4385,297.14935,2106.9219};
+				angles[]={-0,0.82950383,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=29;
+			type="Land_CampingChair_V1_F";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8217.7969,297.14935,2106.2708};
+				angles[]={-0,1.2321641,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=31;
+			type="Land_CampingChair_V1_F";
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8217.0762,297.14935,2102.5605};
+				angles[]={-0,2.3224254,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=32;
+			type="Land_CampingChair_V1_F";
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8218.1758,297.14935,2103.2522};
+				angles[]={-0,2.3224254,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=33;
+			type="Land_CampingChair_V1_F";
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8219.835,297.14935,2106.1487};
+				angles[]={-0,1.2776544,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=34;
+			type="Land_CampingChair_V1_F";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8218.7705,297.14935,2107.5977};
+				angles[]={-0,0.61894083,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=35;
+			type="Land_CampingChair_V1_F";
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8216.5771,297.31061,2108.3877};
+				angles[]={1.1974556,1.884761,5.1577826};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=36;
+			type="Land_CampingChair_V1_folded_F";
+			atlOffset=0.47998047;
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8216.7305,297.30072,2108.4521};
+				angles[]={1.1974556,1.884761,5.1577826};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=37;
+			type="Land_CampingChair_V1_folded_F";
+			atlOffset=0.47009277;
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8220.9121,297.04877,2098.7021};
+				angles[]={-0,4.20331,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=38;
+			type="Land_TableDesk_F";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8220.0293,297.3161,2097.8801};
+				angles[]={-0,3.7904005,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=39;
+			type="Land_OfficeChair_01_F";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8216.2471,297.14349,2098.6101};
+				angles[]={-0,2.6177349,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=40;
+			type="Land_ShelvesWooden_F";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8216.7139,297.42218,2100.9949};
+				angles[]={-0,5.7601299,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=42;
+			type="Land_OfficeCabinet_01_F";
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8214.0508,297.91739,2101.1929};
+				angles[]={-0,4.1227822,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="schermo2";
+			};
+			id=43;
+			type="Land_FlatTV_01_F";
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8219.6426,299.91541,2101.0972};
+				angles[]={0,4.2133975,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=22;
+			type="Land_Cargo_HQ_V3_F";
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8215.2393,298.46774,2107.3254};
+				angles[]={0,5.7783656,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=47;
+			type="UserTexture1m_F";
+			atlOffset=1.8260498;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="img\15bn_logoescritta.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+	};
+};
