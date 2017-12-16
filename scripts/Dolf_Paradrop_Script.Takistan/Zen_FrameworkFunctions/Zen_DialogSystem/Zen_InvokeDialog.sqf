@@ -128,6 +128,7 @@ if !(_doRefresh) then {
             } else {
                 _control = _display ctrlCreate [_controlInstanClass, NEXT_IDC
                 _Zen_Dialog_Controls_Local pushBack [_controlID, _control, ([_controlID] call Zen_HashControlData)];
+             
 
                 if (toUpper _controlType in ["SLIDER"]) then {
                     _control sliderSetPosition 0;
