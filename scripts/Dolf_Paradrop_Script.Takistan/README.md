@@ -26,10 +26,10 @@ class CfgNotifications {
     #include "Zen_FrameworkFunctions\Zen_TaskSystem\Zen_TaskNotifications.hpp"
 };
 ```
-- aggiungere un singolo uomo della classe desiderata (ufficiale) e chiamarlo "dolf_paradropOfficier";
-- aggiungere un singolo uomo della classe desiderata (pilota) e chiamarlo "dolf_paradrop_pilota";
-- aggiungere un aereo, nominarlo "dolf_paradrop_aereo" e posizionarlo all'inizio della pista;
 - impostare i parametri desiderati (altitudine, velocità e aeroporto di atterraggio) nel file "scripts/paradrop/paradrop_init.sqf";
+- nell'editor, aggiungere un singolo uomo della classe desiderata (ufficiale) e chiamarlo "dolf_paradropOfficier";
+- nell'editor, aggiungere un singolo uomo della classe desiderata (pilota) e chiamarlo "dolf_paradrop_pilota";
+- nell'editor, aggiungere un aereo, nominarlo "dolf_paradrop_aereo" e posizionarlo all'inizio della pista;
 
 ## Istruzioni per il giocatore (v0.2)
 - avvicinarsi all'unità scelta come "ufficiale" dal mission maker ("dolf_paradropOfficier");
