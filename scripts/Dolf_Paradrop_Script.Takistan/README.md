@@ -26,6 +26,11 @@ class CfgNotifications {
     #include "Zen_FrameworkFunctions\Zen_TaskSystem\Zen_TaskNotifications.hpp"
 };
 ```
+- creare un file chiamato "onPlayerRespawn.sqf" e aggiungere le seguenti righe:
+```
+[] execVM "scripts\paradrop\ui\paradrop_ui_waypoints.sqf";
+[] execVM "scripts\paradrop\ui\paradrop_ui_start.sqf";
+```
 - impostare i parametri desiderati (altitudine, velocità e aeroporto di atterraggio) nel file "scripts/paradrop/paradrop_init.sqf";
 - nell'editor, aggiungere un singolo uomo della classe desiderata (ufficiale) e chiamarlo "dolf_paradropOfficier";
 - nell'editor, aggiungere un singolo uomo della classe desiderata (pilota) e chiamarlo "dolf_paradrop_pilota";
