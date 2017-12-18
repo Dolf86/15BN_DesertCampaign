@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=15;
+		nextID=17;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8142.0488,307.72263,1970.0018};
-		dir[]={-0.53102684,-0.26084298,0.80626577};
-		up[]={-0.14349048,0.96537495,0.21786216};
-		aside[]={0.83517241,-2.932793e-007,0.55006546};
+		pos[]={8135.2319,312.70245,1987.3477};
+		dir[]={0.091222808,-0.66407138,0.74216914};
+		up[]={0.081012875,0.74766839,0.65910888};
+		aside[]={0.99258673,-1.039698e-007,-0.12200224};
 	};
 };
 binarizationWanted=0;
@@ -29,13 +29,15 @@ addons[]=
 	"A3_Characters_F_Jets",
 	"RHS_US_A2_AirImport",
 	"rhsusf_c_troops",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"A3_Weapons_F_Ammoboxes",
+	"ace_parachute"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=7;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -71,6 +73,20 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item5
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="ace_parachute";
+			name="ACE3 - Parachute";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 randomSeed=5575121;
@@ -101,7 +117,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=7;
 		class Item0
 		{
 			dataType="Group";
@@ -114,8 +130,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8132.2319,296.04144,1996.8811};
-						angles[]={0,5.0961695,0};
+						position[]={8135.0693,296.04144,1996.3823};
+						angles[]={0,0.50003225,0};
 					};
 					side="West";
 					flags=7;
@@ -233,8 +249,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7750.7891,296.1745,1616.1115};
-				angles[]={0,1.0204874,0};
+				position[]={7750.7891,296.1745,1616.1118};
+				angles[]={0,1.020494,0};
 			};
 			side="Empty";
 			flags=4;
@@ -266,7 +282,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item3
@@ -281,7 +316,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7733.1919,296.04144,1644.4159};
+						position[]={7733.1919,296.04144,1644.416};
 					};
 					side="West";
 					flags=7;
@@ -468,6 +503,36 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8136.4194,296.04001,1997.4507};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=15;
+			type="B_AssaultPack_khk";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8135.4038,296.04001,1998.077};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=16;
+			type="B_Parachute";
 		};
 	};
 };

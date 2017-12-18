@@ -5,6 +5,9 @@ dolf_paradrop_ui_waypoints_BUSY = false;
 dolf_paradropWaypointsLabels = [];
 dolf_paradropWaypoints = [];
 
+dolf_paradrop_newAltitude = 2000;
+dolf_paradrop_Airports = [1,0];
+dolf_paradrop_AirportsLabels = ["Loy Manara","Rasman"];
 
 dolf_paradrop_ui_waypoints_picture_logo = ["Picture",
 
@@ -29,9 +32,25 @@ dolf_paradrop_ui_waypoints_list_Waypoints = ["List",
 ] call Zen_CreateControl;
 
 
+dolf_paradrop_ui_waypoints_text_LabelLandinAirport = ["Text",
+    ["Text", "Land at"],
+    ["Position", [10, 1]],
+    ["Size", [6,2]]
+] call Zen_CreateControl;
+
+dolf_paradrop_ui_waypoints_list_Airports = ["DropList",
+
+    ["List", dolf_paradrop_AirportsLabels],
+    ["ListData", dolf_paradrop_Airports],
+
+    ["Position", [17, 1]],
+    ["Size", [8,2]]
+] call Zen_CreateControl;
+
+
 dolf_paradrop_ui_waypoints_map_Position = ["Map",
-	["Position",[9,1]],
-	["Size",[30,38]],    
+	["Position",[9,4]],
+	["Size",[30,34]],    
     ["Event",[["MOUSEBUTTONCLICK","dolf_ui_waypoints_fnc_MapClick"]]]
 ] call Zen_CreateControl;
 
@@ -40,18 +59,19 @@ dolf_paradrop_ui_waypoints_button_Start = ["Button",
 
     ["Text", "Start"],
 
-    ["Position", [1, 37]],
+    ["Position", [1, 36]],
     ["Size", [8,2]],
 
     /**  This is a special type of property that doesn't affect how the button looks.  It allows the button to be event-driven; activation refers to when the button is clicked, and the function is given as a string.  You can use any global function here, including framework functions.  Zen_CloseDialog is provided by the dialog system, you should always use it to ensure the dialog closes properly. */
-    ["ActivationFunction", "dolf_ui_waypoints_fnc_ParadropSetupStart"]
+    ["ActivationFunction", "dolf_ui_waypoints_fnc_ParadropSetupStart"],
+    ["LinksTo",[dolf_paradrop_ui_waypoints_list_Airports]]
 ] call Zen_CreateControl;
 
 dolf_paradrop_ui_waypoints_button_Close = ["Button",
 
     ["Text", "X"],
 
-    ["Position", [38, 1]],
+    ["Position", [37, 1]],
     ["Size", [2,2]],
 
     /**  This is a special type of property that doesn't affect how the button looks.  It allows the button to be event-driven; activation refers to when the button is clicked, and the function is given as a string.  You can use any global function here, including framework functions.  Zen_CloseDialog is provided by the dialog system, you should always use it to ensure the dialog closes properly. */
@@ -251,16 +271,14 @@ dolf_ui_waypoints_fnc_Reorder = {
 
     dolf_Map_WaypointNumber = _nWaypoints;
 
-
-
-
     [0, [dolf_paradrop_ui_waypoints_list_Waypoints]] call Zen_RefreshDialog;
     
     dolf_paradrop_ui_waypoints_BUSY = false;
 };
 
 dolf_ui_waypoints_fnc_ParadropSetupStart = {    
-    [dolf_paradropWaypoints, dolf_paradropWaypointsLabels] remoteExec ["dolf_paradrop_fnc_setupParadrop", 2, false];
+
+    [dolf_paradropWaypoints, dolf_paradropWaypointsLabels, _this select 0] remoteExec ["dolf_paradrop_fnc_setupParadrop", 2, false];
     0 = call Zen_CloseDialog;
 };
 
@@ -281,7 +299,7 @@ dolf_paradrop_ui_waypoints_dialog = [] call Zen_CreateDialog;
 
 {
     0 = [dolf_paradrop_ui_waypoints_dialog, _x] call Zen_LinkControl;
-} forEach [dolf_paradrop_ui_waypoints_button_Start,dolf_paradrop_ui_waypoints_text_LabelParadrop, dolf_paradrop_ui_waypoints_picture_logo,dolf_paradrop_ui_waypoints_list_Waypoints, dolf_paradrop_ui_waypoints_map_Position, dolf_paradrop_ui_waypoints_button_MoveUp,dolf_paradrop_ui_waypoints_button_MoveDown,dolf_paradrop_ui_waypoints_button_Reorder, dolf_paradrop_ui_waypoints_button_RemoveWaypoint, dolf_paradrop_ui_waypoints_button_Close];
+} forEach [dolf_paradrop_ui_waypoints_list_Airports, dolf_paradrop_ui_waypoints_text_LabelLandinAirport, dolf_paradrop_ui_waypoints_button_Start,dolf_paradrop_ui_waypoints_text_LabelParadrop, dolf_paradrop_ui_waypoints_picture_logo,dolf_paradrop_ui_waypoints_list_Waypoints, dolf_paradrop_ui_waypoints_map_Position, dolf_paradrop_ui_waypoints_button_MoveUp,dolf_paradrop_ui_waypoints_button_MoveDown,dolf_paradrop_ui_waypoints_button_Reorder, dolf_paradrop_ui_waypoints_button_RemoveWaypoint, dolf_paradrop_ui_waypoints_button_Close];
 
 
 dolf_paradropOfficier addAction ["Paradrop setup panel", {0 = [_this select 3] spawn Zen_InvokeDialog;}, dolf_paradrop_ui_waypoints_dialog];

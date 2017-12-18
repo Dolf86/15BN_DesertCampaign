@@ -2,11 +2,13 @@
 
 dolf_paradrop_Altitudine = 1000;
 dolf_paradrop_MaxSpeed = 150;
-dolf_paradrop_landAt = 1;
-
 
 //INIT
 dolf_paradropOfficier disableai "move";
+
+dolf_paradrop_aereo hideObjectGlobal true;
+dolf_paradrop_pilota hideObjectGlobal true;
+
 dolf_paradrop_go = false;
 dolf_paradrop_started = false;
 
@@ -24,15 +26,18 @@ dolf_paradrop_fnc_setupParadrop = {
 	if (dolf_paradrop_started) exitWith {};
 	dolf_paradrop_started = true;
 
+	dolf_paradrop_aereo hideObjectGlobal false;
+	dolf_paradrop_pilota hideObjectGlobal false;
+
 	_dolf_paradropWaypoints = _this select 0;
 	_dolf_paradropWaypointsLabels = _this select 1;
+	dolf_paradrop_landAt = _this select 2;
 
 	if (count _dolf_paradropWaypoints == 0) exitWith { hint "Nessun waypoint"};
 
 
 	dolf_paradrop_aereo setPos dolf_paradrop_aereo_startPos;
 	dolf_paradrop_aereo setDir dolf_paradrop_aereo_startDir;
-	dolf_paradrop_aereo setDamage 0;
 
 
 	dolf_paradrop_pilota setPos dolf_paradrop_pilota_startPos;
