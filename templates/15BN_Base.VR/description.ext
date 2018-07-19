@@ -1,0 +1,14 @@
+class Params {
+	#include "Params.hpp"
+};
+
+class CfgFunctions {
+	#include "CfgFunctions.hpp"
+};
+
+class CfgHints {
+	#include "CfgHints.hpp"
+};
+
+briefing = 1;
+onLoadName = "Base";
